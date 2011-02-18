@@ -1,0 +1,5 @@
+Spring puzzles is a collection of common Spring pitfalls.
+
+In the project we show common mistakes often found in Spring apps. We cover samples from Spring Core, Spring AOP, Spring Testing and Spring Transactions.
+The project is build using gradle and we have a test per each puzzle, found in src/main/test
+
