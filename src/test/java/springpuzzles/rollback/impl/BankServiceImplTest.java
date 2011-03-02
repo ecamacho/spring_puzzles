@@ -48,11 +48,16 @@ public class BankServiceImplTest {
         printState();
     }
 
+    /**
+     * Despues de ejecutar el test, spring test hara un rollback, dejando el monto
+     * de las cuentas como estaban en beforeTransaction.
+     * Sin embargo, esto no sucede con los registros de la tabla de bitacora
+     * porque TransactionLogServiceImpl usa un nivel de Propation a REQUIRES_NEW
+     * lo que ocasiona que se ejecute en una transaccion diferente 
+     */
     @Test
     public void testTransfer( ) {
-        bankService.transfer( 1000.0, "account_1", "account_2" );
-        Account originAccount = accountDao.findById( idOriginAccount );
-        Account destinationAccount = accountDao.findById( idDestinationAccount );
+        bankService.transfer( 1000.0, "account_1", "account_2" );        
         logger.debug("[Cantidades después de hacer la transferencia");
         printState();
     }

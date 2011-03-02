@@ -15,7 +15,7 @@ public class MyServiceImpl implements MyService {
 
 
     @Value("#{'mi constante'}")
-    private  String MY_CONSTANT;
+    private static String MY_CONSTANT;
 
     public String processUsingConstant() {
         return MY_CONSTANT;    

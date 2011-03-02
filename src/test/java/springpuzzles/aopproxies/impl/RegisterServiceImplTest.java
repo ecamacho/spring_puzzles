@@ -23,6 +23,11 @@ public class RegisterServiceImplTest {
     @Autowired
     LdapService ldapService;
 
+    /**
+     * Cuantas veces se ejecuta el Aspecto SystemLogger?
+     * Este test muestra las implicaciones de que Spring AOP use por default
+     * proxies dinamicos para inyectar Pointcuts
+     */
     @Test
     public void testAopAspects() {
         registerService.setMailServer( "smtp.host" );

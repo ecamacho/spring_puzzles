@@ -16,10 +16,10 @@ public class CompositeServiceImpl implements CompositeService {
     private static final Logger logger = Logger.getLogger( CompositeServiceImpl.class );
 
 
-    private OtherService otherService;
+    private OtherServiceImpl otherService;
 
     @Autowired
-    public  CompositeServiceImpl ( OtherService otherService ) {
+    public  CompositeServiceImpl ( OtherServiceImpl otherService ) {
          this.otherService = otherService;
     }
 

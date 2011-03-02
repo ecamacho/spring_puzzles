@@ -16,13 +16,19 @@ import springpuzzles.staticfield.MyService;
 @ContextConfiguration(locations = "classpath:springpuzzles/staticfield/test-staticfield-context.xml")
 public class MyServiceImplTest {
 
+    private static final String EXPECTED_RESULT = "mi constante";
+        
     @Autowired
     private MyService myService;
 
+    /**
+     * Este test fallara porque Spring por decision de diseno no inyecta valores a variables
+     * estaticas
+     */
     @Test
     public void testProccessUsingConstant() {
         String result = myService.processUsingConstant();
-        assertEquals("mi constante", result);
+        assertEquals(EXPECTED_RESULT, result);
 
     }
 }
