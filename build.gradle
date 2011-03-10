@@ -8,7 +8,7 @@ dependencies {
 }
 
 task copyTaskWithPatterns(type: Copy) {
-    from 'src/test/resources/springpuzzles/rollback/'
-    into 'build/classes/main/springpuzzles/rollback/'
+    from 'src/test/resources/springpuzzles/'
+    into 'build/classes/main/springpuzzles/'
     include '**/*.sql'    
 }

@@ -4,7 +4,6 @@ import springpuzzles.aopproxies.LdapService;
 import springpuzzles.aopproxies.MailService;
 import springpuzzles.aopproxies.RegisterService;
 
-import javax.annotation.PostConstruct;
 
 /**
  * @author: ecamacho
